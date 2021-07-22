@@ -1,0 +1,591 @@
+body{
+    background-image: url("Images/pattern.jpg");
+    padding: 0 !important;
+    margin: 0 !important;
+    overflow-x: hidden !important;
+}
+
+.topNav{
+    padding: 10px 8%;
+}
+.logo{
+    float: left;
+}
+.nav{
+    float: left;
+    width: calc (100% - 230px);
+    padding: 0;
+    margin: 0;
+    padding-top: 35px;
+    padding-left: 30px;
+    position: relative;
+}
+.nav ul{
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+.nav ul li{
+    display: inline;
+    padding: 15px;
+}
+.nav ul li a{
+    font-size: 15px;
+    font-weight: bold;
+}
+.call{
+    position: absolute;
+    right: -23%;
+    top: 20px;
+    font-size: 15px;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 15px 25px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    background-color: white;
+
+}
+.active{
+    color: #ff7810;
+}
+.active::before{
+    position: absolute;
+    content: "";
+    width: 60px;
+    height: 3px;
+    background: linear-gradient(to right,
+     rgba(255, 120, 16, 1) 0%,
+     rgba(255, 21, 106, 1) 25%, 
+     rgba(255, 183, 47, 1) 50%,
+      rgba(187, 13, 76, 1) 75%, 
+      rgba(69, 204, 137, 1) 100%);
+    bottom: -20px;
+    z-index: 1;
+    border-radius: 3px;
+    animation-name: mover;
+    animation-duration: 0.5s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+@keyframes mover{
+    0%{
+       background: linear-gradient(to right,
+     rgba(255, 120, 16, 1) 0%,
+     rgba(255, 21, 106, 1) 25%, 
+     rgba(255, 183, 47, 1) 50%,
+      rgba(187, 13, 76, 1) 75%, 
+      rgba(69, 204, 137, 1) 100%);
+    }
+    25%{
+        background: linear-gradient(to right,
+        rgba(69, 204, 137, 1)0%,
+      rgba(255, 120, 16, 1) 25%,
+      rgba(255, 21, 106, 1) 50%, 
+      rgba(255, 183, 47, 1) 75%,
+       rgba(187, 13, 76, 1) 100%
+       );
+     }
+     50%{
+        background: linear-gradient(to right,
+        rgba(187, 13, 76, 1) 0%
+        rgba(69, 204, 137, 1)25%,
+      rgba(255, 120, 16, 1) 50%,
+      rgba(255, 21, 106, 1) 75%, 
+      rgba(255, 183, 47, 1) 100%
+       );
+    }
+       75%{
+        background: linear-gradient(to right,
+        rgba(255, 183, 47, 1) 0%
+        rgba(187, 13, 76, 1) 25%
+        rgba(69, 204, 137, 1)50%,
+      rgba(255, 120, 16, 1) 75%,
+      rgba(255, 21, 106, 1) 100%       
+       );
+     }
+
+     100%{
+        background: linear-gradient(to right,
+        rgba(255, 21, 106, 1) 0% 
+        rgba(255, 183, 47, 1) 25%
+        rgba(187, 13, 76, 1) 50%
+        rgba(69, 204, 137, 1)75%,
+      rgba(255, 120, 16, 1) 100%
+       );
+     }
+}
+.flexContainer{
+    padding: 10px 8%;
+    padding-top: 100px;
+
+    
+}
+
+.title > p:first-child{
+    font-size: 65px;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.2;
+    margin-bottom: 0;
+
+}
+.orange{
+    color: #ff7810;
+}
+.title > p:nth-child(2){
+    margin-top: 25px;
+    font-size: 20px;
+    color: #606060;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.7;
+
+}
+.learnPara{
+    padding-top: 20px;
+    text-align: left;
+}
+.learnPara span {
+    background-color: #ff7810;
+    color: white;
+    padding: 15px 30px;
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)
+
+}
+.rotateDiv{
+    position: relative;
+}
+.rotateDiv > div{
+    width: 500px;
+    height: 500px;
+    background-image: url("Images/01.png");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    position: absolute;
+    animation-name: rotate;
+    animation-duration: 30s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+@keyframes rotate{
+    0%{
+        transform: rotate(0deg);
+    }
+    8%{
+        transform: rotate(30deg);
+    }
+    16%{
+        transform: rotate(60deg);
+    }
+    25%{
+        transform: rotate(90deg);
+    }
+    33%{
+        transform: rotate(120deg);
+    }
+    41%{
+        transform: rotate(150deg);
+    }
+    50%{
+        transform: rotate(180deg);
+    }
+    58%{
+        transform: rotate(210deg);
+    }
+    66%{
+        transform: rotate(240deg);
+    }
+    75%{
+        transform: rotate(270deg);
+    }
+    83%{
+        transform: rotate(300deg);
+    }
+    91%{
+        transform: rotate(330deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    } 
+}
+.rotateImg{
+    position: absolute;
+   
+
+}
+.bgIntro{
+    background-color: #f5fff3;
+    padding: 80px 8%;
+    padding-bottom: 150px;
+}
+.introDiv > h3{
+    display: inline-block;
+    padding: 5px;
+    color: white;
+    background-color: #ff7810;
+    font-size: 22px;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-bottom: 0;
+
+}
+.introDiv > h1{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 50px;
+    margin-bottom: 15px;
+
+}
+.intPara{
+    font-size: 18px;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 2;
+    color: #606060;
+    margin: 0;
+
+}
+.bitMan{
+    font-weight: bold !important;
+
+}
+.upDiv{
+    position: relative;
+}
+.upDiv > img{
+    position: absolute;
+    animation-name: upDown;
+    animation-duration: 5s;
+    animation-direction:alternate-reverse;
+    animation-iteration-count: infinite;
+
+
+
+}
+@keyframes upDown{
+    from{
+        top: 0;
+    }
+    to{
+        top: 50px;
+    }
+}
+.serviceDiv{
+    position: relative;
+}
+.serviceP{
+    text-align: center;
+    color: white;
+}
+.serviceP > span{
+    background-color: #ff7810;
+    padding: 6px;
+    font-size: 25px;
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+.serviceH1{
+    font-size: 50px;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+}
+.serviceH1::before{
+    position: relative;
+    display: inline-block;
+    content: "";
+    width: 100px;
+    height: 3px;
+    background: linear-gradient(to right,
+     rgba(255, 120, 16, 1) 0%,
+     rgba(255, 21, 106, 1) 25%, 
+     rgba(255, 183, 47, 1) 50%,
+      rgba(187, 13, 76, 1) 75%, 
+      rgba(69, 204, 137, 1) 100%);
+   top: 30px;
+    z-index: 1;
+    border-radius: 3px;
+    animation-name: mover;
+    animation-duration: 0.5s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    left: 15%;
+}
+.serviceP2{
+    text-align: center;
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 0 20%;
+    line-height: 2;
+}
+.slideDiv{
+    padding: 30px 8%;
+    /*border: 1px solid red;*/
+    position: relative;
+}
+.slideContent{
+    display: flex;
+    height: 450px;
+    /*border: 1px solid #000000;*/
+    position: relative;
+    overflow-x: scroll;
+    overflow-y: hidden;
+}
+.slideContent::-webkit-scrollbar{
+    display: none !important;
+}
+.slideContent{
+    -ms-overflow-style: none !important;
+}
+.slideContent > div{
+    height: 450px;
+    min-width: 363px;
+    width: 363px;
+    /*border: 1px solid blue;*/
+    margin: 0 10px;
+    float: left;
+    
+}
+.slideContent >div:first-child{
+    margin-left: 0 !important;
+}
+.slideContent >div >h2{
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    background-color: white;
+    margin: 0;
+    padding: 30px 0;
+}
+.dirDiv{
+    padding: 50px 0;
+    text-align: center;
+}
+.dirDiv >span{
+    display: inline-block;
+    height: 70px;
+    width: 200px;
+    border-radius: 30px;
+    border: 2px solid #f0f0f0;
+    background-color: white;
+    font-weight: bold;
+    font-size: 40px;
+    padding-top: 7px;
+}
+.dirDiv >span:first-child{
+    margin-right: 10px;
+}
+.dirDiv >span:nth-child(2){
+    margin-left: 10px;
+}
+.textDiv{
+    padding: 55px 8%;
+    position: relative;
+    font-family: Arial, Helvetica, sans-serif;
+    padding-bottom: 150px;
+
+
+}
+.textDiv >div:first-child{
+    padding-right: 5%;
+    padding-top: 120px;
+}
+.textP >span{
+    font-size: 25px;
+    padding: 6px;
+    background-color: #ff7810;
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+}
+.textH1{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 50px;
+    line-height: 1.2;
+    position: relative;
+
+}
+.textH1::before{
+    position: absolute;
+    display: inline-block;
+    content: "";
+    width: 120px;
+    height: 3px;
+    background: linear-gradient(to right,
+     rgba(255, 120, 16, 1) 0%,
+     rgba(255, 21, 106, 1) 25%, 
+     rgba(255, 183, 47, 1) 50%,
+      rgba(187, 13, 76, 1) 75%, 
+      rgba(69, 204, 137, 1) 100%);
+   bottom: -15px;
+    z-index: 1;
+    border-radius: 3px;
+    animation-name: mover;
+    animation-duration: 0.5s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    
+}
+.textP2{
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    padding-right: 10%;
+    line-height: 2;
+}
+.textDiv >div:nth-child(2) >div{
+    background-color: #ff7810;
+    padding: 0 0 30px 30px;
+    border-radius: 10px;
+   
+}
+.textDiv >div:nth-child(2) >div >div{
+    text-align: justify;
+    font-size: 18px;
+    color: white;
+    background-color: #ff5a2c;
+    padding: 25px;
+    line-height: 1.7;
+    border-radius: 10px;
+}
+.textDiv >div:nth-child(2) >div >div h2{
+    text-align: center;
+}
+.textDiv >div:nth-child(2) >div >div span{
+    font-size: 25px;
+    padding: 8px;
+    background-color: rgba(0,0,0,0.2);
+}
+.textDiv >div:nth-child(2) >div >div h5{
+    text-align: center;
+    color: black;
+    padding: 0 20%;
+    font-size: 18px;
+}
+.textDiv >div:nth-child(2)::before{
+    position: absolute;
+    content: "";
+    display: inline-block;
+    width: 0;
+    height: 0;
+
+    bottom: 80px;
+    border-top: 100px solid #ff7810;
+    border-right: 100px solid transparent;
+
+
+}
+.animateDiv{
+    height: 100%;
+    position: absolute;
+    background-image: url("Images/aniImg.png");
+    background-size: cover;
+    left: 0;
+    z-index: -1;
+    animation-name: animat;
+    animation-duration: 45s;
+    animation-iteration-count: infinite;
+    
+}
+@keyframes animat{
+    from{left: 300px;
+
+    }
+    to{left: -300px;
+        
+    }
+}
+.projectContent{
+    text-align: center;
+
+}
+.projectContent >h1{
+    font-size: 60px;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-bottom: 0;
+
+}
+.projectContent >h2{
+    font-family: Arial, Helvetica, sans-serif;
+    color: #ff7810;
+    margin-top: 10px;
+
+}
+.brandDiv{
+    text-align: center;
+    position: relative;
+}
+.brandDiv >p:first-child{
+    text-align: center;
+}
+.brandDiv >p:first-child >span{
+    font-size: 25px;
+    background-color: #ff7810;
+    padding:5px;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+}
+.brandDiv >p:nth-child(2){
+    font-size: 40px;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-top: 10px;
+    position: relative;
+    text-align: center;
+
+
+}
+.brandDiv >P:nth-child(2)::before{
+    content: "";
+    position:absolute;
+    bottom: -30px;
+    display: inline-block;
+    width: 120px;
+    background-color: tomato;
+    height: 3px;
+    left: 46%;
+    background: linear-gradient(to right,
+     rgba(255, 120, 16, 1) 0%,
+     rgba(255, 21, 106, 1) 25%, 
+     rgba(255, 183, 47, 1) 50%,
+      rgba(187, 13, 76, 1) 75%, 
+      rgba(69, 204, 137, 1) 100%);
+   bottom: -15px;
+    z-index: 1;
+    border-radius: 3px;
+    animation-name: mover;
+    animation-duration: 0.5s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+
+}
+.bDiv{
+    background-color: white;
+    padding: 50px 8%;
+
+}
+.bDivCon{
+    height: 200px;
+    border: 1px solid lightgray;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-wrap: wrap;
+    flex-shrink: 1;
+
+}
+.bDivCon >img{ 
+    width: 150px;
+    height: 70px;
+   
+}
+.particular >img{
+    height: 80px !important;
+    width: 80px !important;
+}
+@media only screen and (max-width:600px) { 
+    .projectContent{
+        width: 100% !important;
+    }
+    
+}
+
